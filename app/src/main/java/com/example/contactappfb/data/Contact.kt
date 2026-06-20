@@ -1,8 +1,7 @@
-package com.example.jccontact.data
+package com.example.contactappfb.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.jccontact.item.ConDetails
 
 @Entity(tableName = "contacts_table")
 data class Contact(

@@ -1,7 +1,7 @@
-package com.example.jccontact.repository
+package com.example.contactappfb.repository
 
-import com.example.jccontact.data.Contact
-import com.example.jccontact.data.ContactDao
+import com.example.contactappfb.data.Contact
+import com.example.contactappfb.data.ContactDao
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -12,7 +12,7 @@ class OfflineContactsRepository @Inject constructor(private var contactDao: Cont
 return contactDao.getAllContact()
     }
 
-    override fun getContactStream(id: Int): Flow<Contact?> {
+    override fun getContactStream(id: Int): Flow<Contact> {
       return contactDao.getItem(id)
     }
 

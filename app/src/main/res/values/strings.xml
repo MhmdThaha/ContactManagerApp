@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ContactAppFB</string>
+    <string name="no_item_description">No contacts yet</string>
+    <string name="item_entry_title">Add Contact</string>
+    <string name="save_action">Save</string>
+    <string name="required_fields">All fields are required</string>
 </resources>

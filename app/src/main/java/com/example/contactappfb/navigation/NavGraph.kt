@@ -1,20 +1,18 @@
-package com.example.jccontact.navigation
+package com.example.contactappfb.navigation
 
-import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.example.jccontact.home.HomeDestination
-import com.example.jccontact.home.HomeScreen
-import com.example.jccontact.item.ContactEditDestination
-import com.example.jccontact.item.ContactEntryDestination
-import com.example.jccontact.item.ContactEntryScreen
-import com.example.jccontact.item.ContactItemEditScreen
+import com.example.contactappfb.HomeDestination
+import com.example.contactappfb.HomeScreen
+import com.example.contactappfb.item.ContactEditDestination
+import com.example.contactappfb.item.ContactEntryDestination
+import com.example.contactappfb.item.ContactEntryScreen
+import com.example.contactappfb.item.ContactItemEditScreen
 
 @Composable
 fun ConNavHost(
@@ -30,9 +28,8 @@ fun ConNavHost(
             HomeScreen(
                 navigateToItemEntry =
                     { navController.navigate(ContactEntryDestination.route) },
-                navigateToEditItem = { itemId ->            // Syntax: callback with argument
-                    navController.navigate("${ ContactEditDestination.route}/$itemId")
-                    // Meaning: go to edit screen with id (like opening news detail)
+                navigateToEditItem = { itemId ->
+                    navController.navigate("${ContactEditDestination.route}/$itemId")
                 }
             )
         }
@@ -42,27 +39,17 @@ fun ConNavHost(
                 onNavigateUp = { navController.navigateUp() }
             )
         }
-        //
         composable(
             route = ContactEditDestination.routeWithArgs,
-            arguments = listOf(navArgument(ContactEditDestination.itemIdArg ){
-                type = NavType.IntType                  // Syntax: require argument type = Int
-
-            })){
-
+            arguments = listOf(navArgument(ContactEditDestination.itemIdArg) {
+                type = NavType.IntType
+            })
+        ) {
             ContactItemEditScreen(
-                      navigateBack = { navController.popBackStack() },
-                      onNavigateUp = { navController.navigateUp() }
-                )
+                navigateBack = { navController.popBackStack() },
+                onNavigateUp = { navController.navigateUp() }
+            )
         }
-
-    //    ) {
-      //      ContactItemEditScreen(
-        //        navigateBack = { navController.popBackStack() },
-          //      onNavigateUp = { navController.navigateUp() }
-            //)
-        //}
-
     }
 }
 

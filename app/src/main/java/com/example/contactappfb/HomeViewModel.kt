@@ -1,12 +1,12 @@
-package com.example.jccontact.home
+package com.example.contactappfb.home
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jccontact.data.Contact
-import com.example.jccontact.item.ConDetails
-import com.example.jccontact.item.ContactEditDestination
-import com.example.jccontact.repository.ContactRepository
+import com.example.contactappfb.data.Contact
+import com.example.contactappfb.item.ConDetails
+import com.example.contactappfb.item.ContactEditDestination
+import com.example.contactappfb.repository.ContactRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
-import com.example.jccontact.item.toContactDetails
+import com.example.contactappfb.item.toContactDetails
 
 
 

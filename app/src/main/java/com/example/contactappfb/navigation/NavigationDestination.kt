@@ -1,4 +1,4 @@
-package com.example.jccontact.navigation
+package com.example.contactappfb.navigation
 
 interface NavigationDestination {
 

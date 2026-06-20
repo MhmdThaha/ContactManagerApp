@@ -1,12 +1,12 @@
-package com.example.jccontact.item
+package com.example.contactappfb.item
 
 import android.provider.ContactsContract
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.jccontact.data.Contact
-import com.example.jccontact.repository.ContactRepository
+import com.example.contactappfb.data.Contact
+import com.example.contactappfb.repository.ContactRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlin.String

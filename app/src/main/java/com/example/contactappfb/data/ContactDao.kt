@@ -1,4 +1,4 @@
-package com.example.jccontact.data
+package com.example.contactappfb.data
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -12,9 +12,6 @@ interface ContactDao {
 
     @Query("SELECT * FROM contacts_table")
     fun getAllContact(): Flow<List<Contact>>
-
-    @Query("SELECT * FROM contacts_table ORDER BY name ASC")
-    fun getAllContactAsc(): Flow<List<Contact>>
 
     @Query("SELECT * from contacts_table WHERE id = :id")
     fun getItem(id: Int): Flow<Contact>

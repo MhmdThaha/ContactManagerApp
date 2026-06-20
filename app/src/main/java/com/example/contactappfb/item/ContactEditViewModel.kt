@@ -1,4 +1,4 @@
-package com.example.jccontact.item
+package com.example.contactappfb.item
 
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -10,9 +10,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jccontact.data.Contact
-//import com.example.jccontact.home.ContUiState
-import com.example.jccontact.repository.ContactRepository
+import com.example.contactappfb.data.Contact
+//import com.example.contactappfb.home.ContUiState
+import com.example.contactappfb.repository.ContactRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

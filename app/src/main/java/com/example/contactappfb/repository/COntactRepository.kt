@@ -1,6 +1,6 @@
-package com.example.jccontact.repository
+package com.example.contactappfb.repository
 
-import com.example.jccontact.data.Contact
+import com.example.contactappfb.data.Contact
 import kotlinx.coroutines.flow.Flow
 
 
@@ -11,7 +11,7 @@ interface ContactRepository{
     /**
      * Retrieve an item from the given data source that matches with the [id].
      */
-    fun getContactStream(id: Int): Flow<Contact?>
+    fun getContactStream(id: Int): Flow<Contact>
 //Get one item by its id and keep watching for changes.
     /**
      * Insert item in the data source
